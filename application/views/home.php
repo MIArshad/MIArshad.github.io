@@ -12,6 +12,7 @@
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Raleway:200,100,400" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="application/views/css/styles.css" rel="stylesheet" />
     </head>
@@ -51,7 +52,15 @@
                         <h2 class="text-white mb-4">A Well-Rounded Developer Working Towards A Future Role In DevOps</h2>
                     </div>
                 </div>
-                <img class="img-fluid" src="application/views/assets/img/ipad.png" alt="" />
+                <div id="typing-section">
+                    <h1 id="typing-text">
+                        <span
+                            class="txt-rotate"
+                            data-period="2000"
+                            data-rotate='[ "Hello, World!" ]'>
+                        </span>
+                    </h1>
+                </div>
             </div>
         </section>
         <!-- Projects-->
@@ -84,13 +93,13 @@
                 </div>
                 <!-- Project Two Row-->
                 <div class="row justify-content-center no-gutters">
-                    <div class="col-lg-6"><img class="img-fluid" src="application/views/assets/img/demo-image-02.jpg" alt="" /></div>
+                    <div class="col-lg-6"><img class="img-fluid" src="application/views/assets/img/PomegranateGames.PNG" alt="" /></div>
                     <div class="col-lg-6 order-lg-first">
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
                                 <div class="project-text w-100 my-auto text-center text-lg-right">
-                                    <h4 class="text-white">Mountains</h4>
-                                    <p class="mb-0 text-white-50">Another example of a project with its respective description. These sections work well responsively as well, try this theme on a small screen!</p>
+                                    <h4 class="text-white">Games Review Site</h4>
+                                    <p class="mb-0 text-white-50">This is a simple site created using Codeigniter, vue.js, node.js and bootstrap to create a site that allows users to view the reviews, leave a review on the site. It also has a live chat feature implemented using node to allow users to chat with other users. Further development would include chatrooms rather than one on one live chat.</p>
                                     <hr class="d-none d-lg-block mb-0 mr-0" />
                                 </div>
                             </div>
