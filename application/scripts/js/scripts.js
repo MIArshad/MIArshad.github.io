@@ -53,7 +53,7 @@
     navbarCollapse();
     // Collapse the navbar when page is scrolled
     $(window).scroll(navbarCollapse);
-})(jQuery); // End of use strict
+}); // End of use strict
 
 var TxtRotate = function(el, toRotate, period) {
 this.toRotate = toRotate;
@@ -111,5 +111,3 @@ css.type = "text/css";
 css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
 document.body.appendChild(css);
 };
-
-
