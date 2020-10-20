@@ -86,7 +86,7 @@
                             <div class="d-flex h-100">
                                 <div class="project-text w-100 my-auto text-center text-lg-left">
                                     <h4 class="text-white">E-Commerce Site And Order Management System For Fanatics</h4>
-									<p class="mb-0 text-white-50">A simple site built using Codeigniter/php which allows registration, login and the purchasing of items. Admins are able to perform various functions such as add/remove items and keep a record of the orders that have been placed</p><p class="mb-0 text-white-50">This was built in a team of two with a friend</p>
+									                  <p class="mb-0 text-white-50">A simple site built using Codeigniter/php which allows registration, login and the purchasing of items. Admins are able to perform various functions such as add/remove items and keep a record of the orders that have been placed</p><p class="mb-0 text-white-50">This was built in a team of two with a friend</p>
                                     <hr class="d-none d-lg-block mb-0 ml-0" />
                                 </div>
                             </div>
@@ -117,10 +117,42 @@
                     <div class="col-md-10 col-lg-8 mx-auto text-center">
                         <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
                         <h2 class="text-white mb-5">Subscribe to receive updates!</h2>
-                        <form class="form-inline d-flex">
-                            <input class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputEmail" type="email" placeholder="Enter email address..." />
-                            <button class="btn btn-primary mx-auto" type="submit">Subscribe</button>
-                        </form>
+
+                        <?php
+                        $action=$_REQUEST['action'];
+                        if ($action=="") /** display the contact form */
+                          {
+                            ?>
+                            <form action="" method="POST" enctype="multipart/form-data">
+                              <input type="hidden" name="action" value="submit">
+                              Your name:<br>
+                              <input class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputName" type="text" placeholder="Enter Full Name..." />
+                              Your email:<br>
+                              <input class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputEmail" type="email" placeholder="Enter Email Address..." />
+                              Your message:<br>
+                              <textarea name="message" rows="7" cols="30"></textarea><br>
+                              <button class="btn btn-primary mx-auto" type="submit" value="Submit">
+                            </form>
+                        <?php
+                        }
+                        else/* send the submitted data */
+                        {
+                          $name=$_REQUEST['name'];
+                          $email=$_REQUEST['email'];
+                          $message=$_REQUEST['message'];
+                          if (($name=="")||($email=="")||($message==""))
+                          {
+                              echo "All fields are required, please fill <a href=\"\">the form</a> again.";
+                          }
+                          else
+                          {
+                            $from="From: $name<$email>\r\nReturn-path: $email";
+                            $subject="Message sent using your contact form";
+                            mail("ismaelarshad@gmail.com", $subject, $message, $from);
+                            echo "Email sent!";
+                          }
+                        }
+                        ?>
                     </div>
                 </div>
             </div>
