@@ -66,7 +66,7 @@
             </div>
         </section>
         <!-- Projects-->
-        <section class="projects-section bg-light" id="projects">
+        <section class="projects-section bg-dark" id="projects">
             <div class="container">
                 <!-- Featured Project Row-->
                 <div class="row align-items-center no-gutters mb-4 mb-lg-5">
