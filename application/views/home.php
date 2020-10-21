@@ -117,42 +117,54 @@
                     <div class="col-md-10 col-lg-8 mx-auto text-center">
                         <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
                         <h2 class="text-white mb-5">Subscribe to receive updates!</h2>
-
-                        <?php
-                        $action=$_REQUEST['action'];
-                        if ($action=="") /** display the contact form */
-                          {
-                            ?>
-                            <form action="" method="POST" enctype="multipart/form-data">
-                              <input type="hidden" name="action" value="submit">
-                              Your name:<br>
-                              <input class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputName" type="text" placeholder="Enter Full Name..." />
-                              Your email:<br>
-                              <input class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputEmail" type="email" placeholder="Enter Email Address..." />
-                              Your message:<br>
-                              <textarea name="message" rows="7" cols="30"></textarea><br>
-                              <button class="btn btn-primary mx-auto" type="submit" value="Submit">
-                            </form>
-                        <?php
-                        }
-                        else/* send the submitted data */
-                        {
-                          $name=$_REQUEST['name'];
-                          $email=$_REQUEST['email'];
-                          $message=$_REQUEST['message'];
-                          if (($name=="")||($email=="")||($message==""))
-                          {
-                              echo "All fields are required, please fill <a href=\"\">the form</a> again.";
-                          }
-                          else
-                          {
-                            $from="From: $name<$email>\r\nReturn-path: $email";
-                            $subject="Message sent using your contact form";
-                            mail("ismaelarshad@gmail.com", $subject, $message, $from);
-                            echo "Email sent!";
-                          }
-                        }
-                        ?>
+                          <!-- <form action="" method="POST" enctype="multipart/form-data">
+                            <input type="hidden" name="action" value="submit">
+                            Your name:<br>
+                            <input class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputName" type="text" placeholder="Enter Email..." />
+                            Your email:<br>
+                            <input class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputMessage" type="email" placeholder="Enter Message Here..." />
+                            Your message:<br>
+                            <textarea name="message" rows="7" cols="30"></textarea><br>
+                            <button class="btn btn-primary mx-auto" type="submit" value="Submit">
+                          </form> -->
+                          <div class="col-md-9 mb-md-0 mb-5">
+                         <form id="contact-form" name="contact-form" action="http://localhost:8081/portfoliosite/portfoliosite/index.php/sendEmail" method="post">
+                             <div class="row">
+                                 <div class="col-md-6">
+                                     <div class="md-form mb-0">
+                                         <input type="text" id="name" name="name" class="form-control">
+                                         <label for="name" class="">Your name</label>
+                                     </div>
+                                 </div>
+                                 <div class="col-md-6">
+                                     <div class="md-form mb-0">
+                                         <input type="text" id="email" name="email" class="form-control">
+                                         <label for="email" class="">Your email</label>
+                                     </div>
+                                 </div>
+                             </div>
+                             <div class="row">
+                                 <div class="col-md-12">
+                                     <div class="md-form mb-0">
+                                         <input type="text" id="subject" name="subject" class="form-control">
+                                         <label for="subject" class="">Subject</label>
+                                     </div>
+                                 </div>
+                             </div>
+                             <div class="row">
+                                 <div class="col-md-12">
+                                     <div class="md-form">
+                                         <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+                                         <label for="message">Your message</label>
+                                     </div>
+                                 </div>
+                             </div>
+                         </form>
+                         <div class="text-center text-md-left">
+                           <input class="btn btn-primary" type="submit" value="Send"></input>
+                         </div>
+                         <div class="status"></div>
+                     </div>
                     </div>
                 </div>
             </div>

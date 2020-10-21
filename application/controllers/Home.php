@@ -16,18 +16,20 @@ class Home extends CI_Controller
 		$this->load->view('home');
 	}
 
-	public function returnUsers()
+	public function SendEmail()
 	{
-		$userArray = array('Firstname' => 'Stuart', 'Surname' => 'cunningham');
+		$name = $this->input->post('name');
+		$email = $this->input->post('email');
+		$subject = $this->input->post('subject');
+		$message = $this->input->post('message');
 
-		header('Content-Type: application/json');
+		$dump = base_url();
 
-		echo json_encode($userArray);
-	}
+		var_dump($dump);
 
-	public function sendUsers()
-	{
-		$newUsers = $this->input->post();
-		print_r($newUsers);
+		$content="From: $name \n Email: $email \n Message: $message";
+		$recipient = "ismaelarshad@gmail.com";
+		$mailheader = "From: $email \r\n";
+		mail($recipient, $subject, $content, $mailheader) or die("Error!");
 	}
 }

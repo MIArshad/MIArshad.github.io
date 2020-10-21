@@ -54,5 +54,4 @@ $route['index'] = 'Home/index';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-$route['get-users'] = 'Home/returnUsers';
-$route['set-users'] = 'Home/sendUsers';
+$route['sendEmail'] = 'Home/SendEmail';
