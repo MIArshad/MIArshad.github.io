@@ -51,7 +51,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 mx-auto">
-                        <h2 class="text-white mb-4">A Well-Rounded Developer Working Towards A Future Role In DevOps</h2>
+                        <h2 class="text-white mb-4">A Well-Rounded Developer Working Towards A Future Role In Using Technology Stacks On The Cutting Edge</h2>
                     </div>
                 </div>
                 <div id="typing-section">
@@ -73,8 +73,8 @@
                     <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="application/views/assets/img/Geofence_app_example.png" alt="" /></div>
                     <div class="col-xl-4 col-lg-5">
                         <div class="featured-text text-center text-lg-left">
-                            <h4>Current Project</h4>
-                            <p class="text-black-50 mb-0">The most recent project being undertaken is a simple Geofence app. The inspiration came from recruiters often finding that their employees don't show up to complete their allocated shifts - The idea is that it will be linked to an admin and an employee, and a notification sent to the admin should the employee fail to show up</p>
+                            <h4 class="text-white">Current Project</h4>
+                            <p class="text-white-50 mb-0">The most recent project being undertaken is a simple Geofence app. The inspiration came from recruiters often finding that their employees don't show up to complete their allocated shifts - The idea is that it will be linked to an admin and an employee, and a notification sent to the admin should the employee fail to show up</p>
                         </div>
                     </div>
                 </div>
@@ -116,19 +116,9 @@
                 <div class="row">
                     <div class="col-md-10 col-lg-8 mx-auto text-center">
                         <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
-                        <h2 class="text-white mb-5">Subscribe to receive updates!</h2>
-                          <!-- <form action="" method="POST" enctype="multipart/form-data">
-                            <input type="hidden" name="action" value="submit">
-                            Your name:<br>
-                            <input class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputName" type="text" placeholder="Enter Email..." />
-                            Your email:<br>
-                            <input class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputMessage" type="email" placeholder="Enter Message Here..." />
-                            Your message:<br>
-                            <textarea name="message" rows="7" cols="30"></textarea><br>
-                            <button class="btn btn-primary mx-auto" type="submit" value="Submit">
-                          </form> -->
-                          <div class="col-md-9 mb-md-0 mb-5">
-                         <form id="contact-form" name="contact-form" action="http://localhost:8081/portfoliosite/portfoliosite/index.php/sendEmail" method="post">
+                        <h2 class="text-white mb-5">Send me a message!</h2>
+                        <div class="d-flex justify-content-center">
+                         <form id="contact-form" name="contact-form" action="<?php echo base_url();?>index.php/sendEmail" method="post">
                              <div class="row">
                                  <div class="col-md-6">
                                      <div class="md-form mb-0">
@@ -159,10 +149,11 @@
                                      </div>
                                  </div>
                              </div>
+                             <div class="text-center text-md-left">
+                               <input class="btn btn-primary" type="submit" value="Send"></input>
+                             </div>
                          </form>
-                         <div class="text-center text-md-left">
-                           <input class="btn btn-primary" type="submit" value="Send"></input>
-                         </div>
+
                          <div class="status"></div>
                      </div>
                     </div>
@@ -172,47 +163,47 @@
         <!-- Contact-->
         <section class="contact-section bg-black">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-4 mb-3 mb-md-0">
+                <div class="d-flex justify-content-center">
+                    <!-- <div class="col-md-4 mb-3 mb-md-0">
                         <div class="card py-4 h-100">
                             <div class="card-body text-center">
                                 <i class="fas fa-map-marked-alt text-primary mb-2"></i>
                                 <h4 class="text-uppercase m-0">Address</h4>
                                 <hr class="my-4" />
-                                <div class="small text-black-50">4923 Market Street, Orlando FL</div>
+                                <div class="small text-black-50">70</div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-4 mb-3 mb-md-0">
+                    </div> -->
+                    <div class=".col-6 col-md-4 mb-9 mb-md-0">
                         <div class="card py-4 h-100">
                             <div class="card-body text-center">
                                 <i class="fas fa-envelope text-primary mb-2"></i>
                                 <h4 class="text-uppercase m-0">Email</h4>
                                 <hr class="my-4" />
-                                <div class="small text-black-50"><a href="#!">hello@yourdomain.com</a></div>
+                                <div class="small text-black-50"><a href="#!">ismaelarshad@gmail.com</a></div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 mb-3 mb-md-0">
+                    <div class=".col-6 col-md-4 mb-9 mb-md-0">
                         <div class="card py-4 h-100">
                             <div class="card-body text-center">
                                 <i class="fas fa-mobile-alt text-primary mb-2"></i>
                                 <h4 class="text-uppercase m-0">Phone</h4>
                                 <hr class="my-4" />
-                                <div class="small text-black-50">+1 (555) 902-8832</div>
+                                <div class="small text-black-50">079 0810 5666</div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="social d-flex justify-content-center">
-                    <a class="mx-2" href="#!"><i class="fab fa-twitter"></i></a>
-                    <a class="mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
-                    <a class="mx-2" href="#!"><i class="fab fa-github"></i></a>
+                    <a class="mx-2" href="https://www.instagram.com/ishy.arshad/"><i class="fab fa-instagram"></i></a>
+                    <!-- <a class="mx-2" href="#!"><i class="fab fa-facebook-f"></i></a> -->
+                    <a class="mx-2" href="https://github.com/MIArshad"><i class="fab fa-github"></i></a>
                 </div>
             </div>
         </section>
         <!-- Footer-->
-        <footer class="footer bg-black small text-center text-white-50"><div class="container">Copyright © Your Website 2020</div></footer>
+        <!-- <footer class="footer bg-black small text-center text-white-50"><div class="container">Copyright © Your Website 2020</div></footer> -->
         <!-- Bootstrap core JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
